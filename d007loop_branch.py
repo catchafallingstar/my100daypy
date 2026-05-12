@@ -45,8 +45,18 @@ while money > 0:
                 print('You win!')
                 money += debt
                 break
+    print('Current money: ', money)
+    while True:
         print('Would you like to continue? (y/n):')
-        choice= input() 
-        # why print('Would you like to continue? (y/n):',choice= input()) is not working? why the input() will show before the print message?
-
+        choice = input()
+    # why print('Would you like to continue? (y/n):',choice= input()) is not working? why the input() will show before the print message?
+        if choice == 'n':
+            print('Thanks for playing!')
+            exit(0)
+        elif choice != 'y':
+            print('Invalid input! Please input y or n.')
+        else: 
+            break
+if money <= 0:
+    print('You are out of money! Game over!')        
 
