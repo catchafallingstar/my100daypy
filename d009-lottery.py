@@ -25,9 +25,9 @@ def one_ticket():
     #.sample() is not a universal tool that works on everything. It is a highly specific tool that only exists inside the random module.
     wb.sort()
     pb = random.choice(pb_range)
-    return wb, pb
+    return wb+ [pb]
 
 n = int(input('How many tickets do you want to generate? '))
 for _ in range(n):
-    wb, pb = one_ticket()
-    print(f'White balls: {wb}, Powerball: {pb}')
+    ticket = one_ticket()
+    print(f'White balls: {ticket[:5]}, Powerball: {ticket[5]}')
