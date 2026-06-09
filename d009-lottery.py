@@ -30,4 +30,8 @@ def one_ticket():
 n = int(input('How many tickets do you want to generate? '))
 for _ in range(n):
     wb, pb = one_ticket()
-    print(f'White balls: {wb}, Powerball: {pb}')
+    # 1. Format all white balls in a single line
+    formatted_wb = " ".join([f"\033[0;37m{ball:0>2d}\033[0m" for ball in wb])
+    
+    # 2. Print the formatted white balls and the Powerball together
+    print(f"{formatted_wb} \033[0;31m{pb:0>2d}\033[0m")
