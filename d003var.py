@@ -9,8 +9,6 @@ print("example code below")
 """
 使用变量保存数据并进行加减乘除运算
 
-Version: 1.0
-Author: 骆昊
 """
 a = 45        # 定义变量a，赋值45
 b = 12        # 定义变量b，赋值12
@@ -59,3 +57,12 @@ print(ord('d'))         # str类型的'd'转成int，输出100
 print(int('abc', base=16))  # str类型的'abc'按十六进制转成int，输出2748,因为a=10*16^2，b=11*16^1，c=12*16^0
 # print(int('abc'))   # str类型的'abc'转成int，抛出ValueError异常,因为'abc'不是一个合法的十进制整数
 #print(int('abc', base=2))  # str类型的'abc'按二进制转成int，抛出ValueError异常,因为'abc'不是一个合法的二进制整数
+
+a = 1
+b = 1
+print(a is b)  # True,因为Python对小整数进行了缓存，所以a和b实际上引用了同一个对象
+print (a == b)  # True,因为a和b的值相等
+list_a = [1, 2, 3]
+list_b = [1, 2, 3]
+print(list_a is list_b)  # False,因为list_a和list_b是两个不同的对象，虽然它们的内容相同
+print(list_a == list_b)  # True,因为list_a和list_b的内容

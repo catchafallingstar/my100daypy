@@ -15,3 +15,10 @@ i6 = [1, 2, 3, 4, 5]
 print(i6[1:5])  # [2, 3, 4, 5]
 i7 = i6*2 # [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
 print(i7[-1:-10:-3])  # [5, 2, 4]
+i6.remove(3)  # [1, 2, 4, 5]
+print(len(i6))  # 4
+ii6 = [i6,i6]
+ii6[1].pop(1)
+nums = [1, 2, 3, 4, 5]
+val = nums[1:4][::-1]
+print(val)  # [4, 3, 2] why is it not a 2d vector? 
